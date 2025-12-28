@@ -20,7 +20,7 @@ import java.util.concurrent.Executors;
 @RequiredArgsConstructor
 public class OmdbService {
 
-	private static final String API_KEY = "e0686da";
+	private static final String API_KEY = System.getenv().getOrDefault("OMDB_API_KEY", "e0686da");
 	private final RestTemplate restTemplate = new RestTemplate();
 	private final ObjectMapper objectMapper = new ObjectMapper();
 	private final Executor executor = Executors.newFixedThreadPool(12);

@@ -22,7 +22,8 @@ export default function HeatmapApp() {
 		setError("");
 		setData([]);
 		try {
-			const url = `http://localhost:8080/api/heatmap/${encodeURIComponent(query.trim())}`;
+			const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:8080";
+			const url = `${backendUrl}/api/heatmap/${encodeURIComponent(query.trim())}`;
 			console.log("Fetching:", url);
 			const res = await fetch(url);
 			if (!res.ok) throw new Error("Show not found or backend unreachable");

@@ -231,6 +231,38 @@ npm start
 }
 ```
 
+## 🌐 Live Demo
+
+🚀 **[View Live Application](https://your-app.vercel.app)**
+
+## 🚢 Deployment
+
+<details>
+<summary><b>Deploy to Vercel + Render (Recommended)</b></summary>
+
+### Frontend (Vercel)
+```bash
+cd frontend
+vercel
+```
+
+### Backend (Render)
+1. Push to GitHub
+2. Connect to Render.com
+3. Add `OMDB_API_KEY` environment variable
+4. Deploy!
+
+</details>
+
+<details>
+<summary><b>Deploy with Docker</b></summary>
+
+```bash
+docker-compose up --build
+```
+
+</details>
+
 ## 🤝 Contributing
 
 Contributions are **welcome**! Feel free to:
